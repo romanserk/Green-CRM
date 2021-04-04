@@ -60,8 +60,8 @@ const Widgets = React.lazy(() => import("./views/widgets/Widgets"));
 const Users = React.lazy(() => import("./views/users/Users"));
 const User = React.lazy(() => import("./views/users/User"));
 
-const RecipientsList = React.lazy(() => import("./views/recipients/RecipientsList"))
-const AddNewRecipient = React.lazy(() => import("./views/recipients/AddNewRecipient"))
+const CustomersList = React.lazy(() => import("./views/customers/CustomersList"))
+const AddNewCustomer = React.lazy(() => import("./views/customers/AddNewCustomer"))
 
 const routes = [
   { path: "/", name: "Home", exact: true },
@@ -121,9 +121,9 @@ const routes = [
   { path: "/widgets", name: "Widgets", component: Widgets },
   { path: "/users", exact: true, name: "Users", component: Users },
   { path: "/users/:id", exact: true, name: "User Details", component: User },
-  { path: "/recipients", exact: true, name: "Recipients", component: RecipientsList },
-  { path: "/recipients/recipients-list", exact: true, name: "Recipients List", component: RecipientsList },
-  { path: "/recipients/add-new-recipient", name: "Add New Recipient", component: AddNewRecipient },
+  { path: "/customers", exact: true, name: "Customers", component: CustomersList },
+  { path: "/customers/customers-list", exact: true, name: "Customers List", component: CustomersList },
+  { path: "/customers/add-new-customer", name: "Add New Customers", component: AddNewCustomer },
 ];
 
 export default routes;

@@ -14,19 +14,19 @@ const _nav =  [
   },
   {
     _tag: 'CSidebarNavDropdown',
-    name: 'Recipients',
-    to: '/recipients',
+    name: 'Customers',
+    to: '/customers',
     icon: <CIcon name="cil-people" customClasses="c-sidebar-nav-icon"/>,
     _children: [
       {
         _tag: 'CSidebarNavItem',
-        name: 'Recipients List',
-        to: '/recipients/recipients-list',
+        name: 'Customers List',
+        to: '/customers/customers-list',
       },
       {
         _tag: 'CSidebarNavItem',
-        name: 'Add New Recipient',
-        to: '/recipients/add-new-recipient',
+        name: 'Add New Customer',
+        to: '/customers/add-new-customer',
       },
     ]
   },

@@ -30,6 +30,24 @@ const _nav =  [
       },
     ]
   },
+  {
+    _tag: 'CSidebarNavDropdown',
+    name: 'Leads',
+    to: '/leads',
+    icon: <CIcon name="cil-file" customClasses="c-sidebar-nav-icon"/>,
+    _children: [
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Leads List',
+        to: '/leads/leads-list',
+      },
+      {
+        _tag: 'CSidebarNavItem',
+        name: 'Add New Lead',
+        to: '/leads/add-new-lead',
+      },
+    ]
+  },
 
 ]
 

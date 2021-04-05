@@ -6,6 +6,7 @@ const initialState = {
       {
         id: 0,
         name: "John Doe",
+
         registered: "2018/01/01",
         role: "Guest",
         status: "Pending",
@@ -20,6 +21,8 @@ const initialState = {
       {
         id: 2,
         name: "Estavan Lykos",
+        email: "test@test.com",
+        mobile: "555-555-555",
         registered: "2018/02/01",
         role: "Staff",
         status: "Banned",

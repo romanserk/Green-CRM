@@ -54,7 +54,7 @@ const Users = () => {
             ]}
             hover
             striped
-            itemsPerPage={5}
+            itemsPerPage={10}
             activePage={page}
             clickableRows
             onRowClick={(item) => history.push(`/users/${item.id}`)}

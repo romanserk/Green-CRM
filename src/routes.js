@@ -63,6 +63,9 @@ const User = React.lazy(() => import("./views/users/User"));
 const CustomersList = React.lazy(() => import("./views/customers/CustomersList"))
 const AddNewCustomer = React.lazy(() => import("./views/customers/AddNewCustomer"))
 
+const LeadsList = React.lazy(() => import("./views/leads/LeadsList"))
+const AddNewLead = React.lazy(() => import("./views/leads/AddNewLead"))
+
 const routes = [
   { path: "/", name: "Home", exact: true },
   { path: "/dashboard", name: "Dashboard", component: Dashboard },
@@ -124,6 +127,8 @@ const routes = [
   { path: "/customers", exact: true, name: "Customers", component: CustomersList },
   { path: "/customers/customers-list", exact: true, name: "Customers List", component: CustomersList },
   { path: "/customers/add-new-customer", name: "Add New Customers", component: AddNewCustomer },
-];
-
+  { path: "/leads", exact: true, name: "Leads", component: LeadsList },
+  { path: "/leads/leads-list", exact: true, name: "Leads List", component: LeadsList },
+  { path: "/leads/add-new-lead", name: "Add New Leads", component: AddNewLead},
+]
 export default routes;

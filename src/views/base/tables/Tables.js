@@ -21,7 +21,7 @@ const getBadge = status => {
     default: return 'primary'
   }
 }
-const fields = ['name','registered', 'role', 'status']
+const fields = ['name', 'email', 'mobile','registered', 'role', 'status']
 
 const Tables = () => {
   return (
@@ -37,7 +37,7 @@ const Tables = () => {
             <CDataTable
               items={usersData}
               fields={fields}
-              itemsPerPage={5}
+              itemsPerPage={10}
               pagination
               scopedSlots = {{
                 'status':
@@ -65,7 +65,7 @@ const Tables = () => {
               items={usersData}
               fields={fields}
               striped
-              itemsPerPage={5}
+              itemsPerPage={10}
               pagination
               scopedSlots = {{
                 'status':
@@ -96,7 +96,7 @@ const Tables = () => {
               items={usersData}
               fields={fields}
               size="sm"
-              itemsPerPage={5}
+              itemsPerPage={10}
               pagination
               scopedSlots = {{
                 'status':
@@ -124,7 +124,7 @@ const Tables = () => {
               items={usersData}
               fields={fields}
               bordered
-              itemsPerPage={5}
+              itemsPerPage={10}
               pagination
               scopedSlots = {{
                 'status':

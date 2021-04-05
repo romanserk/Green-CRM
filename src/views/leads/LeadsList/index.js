@@ -11,7 +11,7 @@ import {
 
 
 
-const CustomersList = (props) => {
+const LeadsList = (props) => {
   const [details, setDetails] = useState([]);
   // const [items, setItems] = useState(usersData)
 
@@ -126,4 +126,4 @@ const mapDispatchToProps = (dispatch) => {
     // setSearchText: (searchText) => dispatch(setSearchText(searchText)),
   };
 };
-export default connect(mapStateToProps, mapDispatchToProps)(CustomersList);
+export default connect(mapStateToProps, mapDispatchToProps)(LeadsList);

@@ -27,11 +27,11 @@ const CustomersList = (props) => {
   };
 
   const fields = [
-    { key: "name", _style: { width: "20%" } },
-    { key: "email", _style: { width: "20%" } },
-    { key: "mobile", _style: { width: "20%" } },
-    "registered",
-    "signature",
+    { key: "name", _style: { width: "18%" } },
+    { key: "email", _style: { width: "18%" } },
+    { key: "mobile", _style: { width: "18%" } },
+    { key: "registered", _style: { width: "18%" } },
+    { key: "signature", _style: { width: "18%" } },
     { key: "status", _style: { width: "10%" } },
     {
       key: "show_details",

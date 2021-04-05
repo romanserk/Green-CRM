@@ -43,7 +43,7 @@ const _nav =  [
       },
       {
         _tag: 'CSidebarNavItem',
-        name: 'Add New Lead',
+        name: 'Add New Leads',
         to: '/leads/add-new-lead',
       },
     ]

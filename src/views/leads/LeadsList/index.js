@@ -27,10 +27,12 @@ const LeadsList = (props) => {
   };
 
   const fields = [
-    { key: "name", _style: { width: "40%" } },
+    { key: "name", _style: { width: "20%" } },
+    { key: "email", _style: { width: "20%" } },
+    { key: "mobile", _style: { width: "20%" } },
     "registered",
-    { key: "role", _style: { width: "20%" } },
-    { key: "status", _style: { width: "20%" } },
+    "signature",
+    { key: "status", _style: { width: "10%" } },
     {
       key: "show_details",
       label: "",

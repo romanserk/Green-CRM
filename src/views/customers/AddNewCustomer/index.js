@@ -78,7 +78,6 @@ const AddNewCustomer = () => {
                 <CFormText className="help-block">
                   Please enter your last name
                 </CFormText>
-                <div class="valid-tooltip">Looks good!</div>
               </CFormGroup>
             </CCol>
           </CFormGroup>

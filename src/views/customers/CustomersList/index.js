@@ -100,11 +100,11 @@ const CustomersList = (props) => {
                 <CCollapse show={details.includes(index)}>
                   <CCardBody>
                     <h4>{item.username}</h4>
-                    <div class="btn-group mt-5" role="group" aria-label="Button group with nested dropdown">
-                      <button type="button" class="btn btn-success">2Sign</button>
+                    <div className="btn-group mt-5" role="group" aria-label="Button group with nested dropdown">
+                      <button type="button" className="btn btn-success">2Sign</button>
 
-                      <div class="btn-group" role="group">
-                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <div className="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" className="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                            Document
                         </button>
                         <div className="dropdown-menu" aria-labelledby="btnGroupDrop1">

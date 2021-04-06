@@ -66,6 +66,9 @@ const AddNewCustomer = React.lazy(() => import("./views/customers/AddNewCustomer
 const LeadsList = React.lazy(() => import("./views/leads/LeadsList"))
 const AddNewLead = React.lazy(() => import("./views/leads/AddNewLead"))
 
+const SendFiles2sign = React.lazy(() => import("./views/2sign/2signSendFiles"))
+const TrackFiles2sign = React.lazy(() => import("./views/2sign/2signTrackFiles"))
+
 const routes = [
   { path: "/", name: "Home", exact: true },
   { path: "/dashboard", name: "Dashboard", component: Dashboard },
@@ -130,5 +133,7 @@ const routes = [
   { path: "/leads", exact: true, name: "Leads", component: LeadsList },
   { path: "/leads/leads-list", exact: true, name: "Leads List", component: LeadsList },
   { path: "/leads/add-new-lead", name: "Add New Leads", component: AddNewLead},
+  { path: "/2sign/send-files", exact: true, name: "Send Files", component: SendFiles2sign },
+  { path: "/2sign/track-files", name: "Track Files", component: TrackFiles2sign},
 ]
 export default routes;

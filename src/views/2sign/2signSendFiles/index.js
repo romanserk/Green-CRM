@@ -121,47 +121,47 @@ const usersData = [
 ];
 const filesData = [
   {
-    id: 0,
+    id: 14,
     FileName: "File One",
     choose: "",
   },
   {
-    id: 1,
+    id: 15,
     FileName: "File Two",
     choose: "",
   },
   {
-    id: 2,
+    id: 16,
     FileName: "File Three",
     choose: "",
   },
   {
-    id: 3,
+    id: 17,
     FileName: "File Four",
     choose: "",
   },
   {
-    id: 4,
+    id: 18,
     FileName: "File Five",
     choose: "",
   },
   {
-    id: 5,
+    id: 19,
     FileName: "File One",
     choose: "",
   },
   {
-    id: 6,
+    id: 20,
     FileName: "File One",
     choose: "",
   },
   {
-    id: 7,
+    id: 21,
     FileName: "File One",
     choose: "",
   },
   {
-    id: 8,
+    id: 22,
     FileName: "File One",
     choose: "",
   },
@@ -177,6 +177,7 @@ const initialForm = {
 const SendFiles2sign = () => {
   const [form, setForm] = useState(initialForm);
   const [validated, setValidated] = useState(false);
+  const [checkedList, setCheckedList] = useState([]);
 
   const handleFormChange = (e) => {
     setForm({
@@ -228,7 +229,21 @@ const SendFiles2sign = () => {
     }
   };
   const handleCheckboxClick = (e) => {
+    const tempAtt = checkedList;
+    var index = tempAtt.indexOf("" + e.target.value);
+
+    if (index >= 0) {
+      tempAtt.splice(index, 1);
+    } else {
+      tempAtt.push(e.target.value);
+    }
+
+    console.log(tempAtt);
+    setCheckedList(tempAtt);
     console.log(e.target.value);
+  };
+  const handleRowClick = (e) => {
+    console.log(e.id);
   };
   return (
     <CForm onSubmit={handleFormSubmit} wasValidated={false}>
@@ -238,7 +253,7 @@ const SendFiles2sign = () => {
           <small> Form</small>
         </CCardHeader>
         <CCardBody>
-          <CFormGroup row >
+          <CFormGroup row>
             <CCol lg="6" className="p-5">
               <h3 className="pb-5">Choose user to send files</h3>
               <CDataTable
@@ -249,6 +264,7 @@ const SendFiles2sign = () => {
                 itemsPerPage={5}
                 hover
                 pagination
+                onRowClick={handleRowClick}
                 scopedSlots={{
                   choose: (item) => (
                     <td className="pl-5">
@@ -272,6 +288,7 @@ const SendFiles2sign = () => {
                 itemsPerPage={5}
                 hover
                 pagination
+                onRowClick={handleRowClick}
                 scopedSlots={{
                   choose: (item) => (
                     <td className="pl-5">
@@ -280,6 +297,7 @@ const SendFiles2sign = () => {
                         id="checkbox1"
                         name="checkbox1"
                         value={item.id}
+                        // checked={checkedList.includes(""+ item.id)}
                       />
                     </td>
                   ),

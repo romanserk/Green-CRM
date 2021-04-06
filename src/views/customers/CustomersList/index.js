@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { connect } from "react-redux";
 import {
   CBadge,
@@ -99,7 +100,20 @@ const CustomersList = (props) => {
                 <CCollapse show={details.includes(index)}>
                   <CCardBody>
                     <h4>{item.username}</h4>
-                    <p className="text-muted">User since: {item.registered}</p>
+                    <div class="btn-group mt-5" role="group" aria-label="Button group with nested dropdown">
+                      <button type="button" class="btn btn-success">2Sign</button>
+
+                      <div class="btn-group" role="group">
+                        <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                           Document
+                        </button>
+                        <div className="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                          <i className="dropdown-item" href="#">Dropdown link</i>
+                          <i className="dropdown-item" href="#">Dropdown link</i>
+                        </div>
+                      </div>
+                    </div>
+                    <p className="text-muted mt-5">User since: {item.registered}</p>
                     <CButton size="sm" color="info">
                       User Settings
                     </CButton>

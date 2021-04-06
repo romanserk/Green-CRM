@@ -61,7 +61,7 @@ const AddNewLead = () => {
   <tbody>
     {items.map((d)=>(
         <tr key={d.item}>
-         <th>{d.Name}</th>
+         <td>{d.Name}</td>
          <td>{d.Email}</td>
          <td>{d.Mobile}</td>
          <td>{d.Comments}</td>

@@ -1,6 +1,10 @@
 import React, { useState } from "react";
 import * as xlsx from "xlsx";
 
+const refreshPage = ()=>{
+  window.location.reload();
+}
+
 const AddNewLead = () => {
 
   const [items, setItems] = useState([])
@@ -39,8 +43,8 @@ const AddNewLead = () => {
 
   return (
   <div>
-    <h2>Add New Leads</h2>
-     <input type="file" className='mt-4' onChange={(e) =>{
+    <h2 className='ml-5'>Add New Leads</h2>
+     <input type="file" className='mt-4 ml-5' onChange={(e) =>{
        const file = e.target.files[0];
        readExcel(file);
      }}/>
@@ -64,9 +68,10 @@ const AddNewLead = () => {
       </tr>
       ))
     }
-  </tbody>
-</table>
-
+   </tbody>
+    <button onClick={refreshPage} type="button" class="btn btn-warning mt-5 mr-2">Clear</button>
+    <button type="button" class="btn btn-success mt-5">Save</button>
+   </table>
   </div>
   );
 };

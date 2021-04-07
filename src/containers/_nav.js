@@ -1,73 +1,77 @@
-import React from 'react'
-import CIcon from '@coreui/icons-react'
+import React from "react";
+import CIcon from "@coreui/icons-react";
 
-const _nav =  [
+const _nav = [
   {
-    _tag: 'CSidebarNavItem',
-    name: 'Dashboard',
-    to: '/dashboard',
-    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon"/>,
+    _tag: "CSidebarNavItem",
+    name: "Dashboard",
+    to: "/dashboard",
+    icon: <CIcon name="cil-speedometer" customClasses="c-sidebar-nav-icon" />,
     badge: {
-      color: 'info',
-      text: 'NEW',
-    }
+      color: "info",
+      text: "NEW",
+    },
   },
   {
-    _tag: 'CSidebarNavDropdown',
-    name: 'Customers',
-    to: '/customers',
-    icon: <CIcon name="cil-people" customClasses="c-sidebar-nav-icon"/>,
+    _tag: "CSidebarNavDropdown",
+    name: "Customers",
+    to: "/customers",
+    icon: <CIcon name="cil-people" customClasses="c-sidebar-nav-icon" />,
     _children: [
       {
-        _tag: 'CSidebarNavItem',
-        name: 'Customers List',
-        to: '/customers/customers-list',
+        _tag: "CSidebarNavItem",
+        name: "Customers List",
+        to: "/customers/customers-list",
       },
       {
-        _tag: 'CSidebarNavItem',
-        name: 'Add New Customer',
-        to: '/customers/add-new-customer',
+        _tag: "CSidebarNavItem",
+        name: "Add New Customer",
+        to: "/customers/add-new-customer",
       },
-    ]
+    ],
   },
   {
-    _tag: 'CSidebarNavDropdown',
-    name: 'Leads',
-    to: '/leads',
-    icon: <CIcon name="cil-file" customClasses="c-sidebar-nav-icon"/>,
+    _tag: "CSidebarNavDropdown",
+    name: "Leads",
+    to: "/leads",
+    icon: <CIcon name="cil-file" customClasses="c-sidebar-nav-icon" />,
     _children: [
       {
-        _tag: 'CSidebarNavItem',
-        name: 'Leads List',
-        to: '/leads/leads-list',
+        _tag: "CSidebarNavItem",
+        name: "Leads List",
+        to: "/leads/leads-list",
       },
       {
-        _tag: 'CSidebarNavItem',
-        name: 'Add New Leads',
-        to: '/leads/add-new-lead',
+        _tag: "CSidebarNavItem",
+        name: "Add New Leads",
+        to: "/leads/add-new-lead",
       },
-    ]
+    ],
   },
   {
-    _tag: 'CSidebarNavDropdown',
-    name: '2sign',
-    to: '/2sign',
-    icon: <CIcon name="cil-pencil" customClasses="c-sidebar-nav-icon"/>,
+    _tag: "CSidebarNavDropdown",
+    name: "2sign",
+    to: "/2sign",
+    icon: <CIcon name="cil-pencil" customClasses="c-sidebar-nav-icon" />,
     _children: [
       {
-        _tag: 'CSidebarNavItem',
-        name: 'Track Files',
-        to: '/2sign/track-files',
+        _tag: "CSidebarNavItem",
+        name: "Track Files",
+        to: "/2sign/track-files",
       },
       {
-        _tag: 'CSidebarNavItem',
-        name: 'Send File 2sign',
-        to: '/2sign/send-files',
+        _tag: "CSidebarNavItem",
+        name: "Send File 2sign",
+        to: "/2sign/send-files",
       },
-    ]
+      {
+        _tag: "CSidebarNavItem",
+        name: "Add Files To List",
+        to: "/2sign/add-files-to-2sign-list",
+      },
+    ],
   },
-
-]
+];
 
 // const _nav_original =  [
 //   {
@@ -377,5 +381,4 @@ const _nav =  [
 //   }
 // ]
 
-
-export default _nav
+export default _nav;

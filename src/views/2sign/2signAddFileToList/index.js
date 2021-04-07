@@ -22,8 +22,8 @@ import CIcon from "@coreui/icons-react";
 
 const initialForm = {
   fileName: "",
-  XPossition: "",
-  YPossition: "",
+  XPosition: "",
+  YPosition: "",
   width: "",
   height: "",
 };
@@ -55,8 +55,8 @@ const AddFileToList2sign = () => {
     display: `${form.width + form.height > 0 ? "block" : "none"}`,
     zIndex: "500",
     position: "absolute",
-    left: `${form.XPossition}px`,
-    top: `${form.YPossition}px`,
+    left: `${form.XPosition}px`,
+    top: `${form.YPosition}px`,
     width: `${form.width}px`,
     height: `${form.height}px`,
     border: "solid 4px blue",
@@ -138,41 +138,41 @@ const AddFileToList2sign = () => {
               <CFormGroup row>
                 <CCol md="6">
                   <CFormGroup>
-                    <CLabel htmlFor="last-name">X Possition</CLabel>
+                    <CLabel htmlFor="XPosition-input">X Position</CLabel>
                     <CInput
                       type="number"
-                      id="XPossition-input"
-                      name="XPossition"
-                      value={form.XPossition}
+                      id="XPosition-input"
+                      name="XPosition"
+                      value={form.XPosition}
                       onChange={handleFormChange}
-                      placeholder="Enter X Possition"
+                      placeholder="Enter X Position"
                       required
                     />
                     <CFormText className="help-block">
-                      Please enter your signature top left corner X possition
+                      Please enter your signature top left corner X position
                     </CFormText>
                   </CFormGroup>
                 </CCol>
                 <CCol md="6">
-                  <CLabel htmlFor="email-input">Y Possition</CLabel>
+                  <CLabel htmlFor="email-input">Y Position</CLabel>
                   <CInput
                     type="number"
-                    id="YPossition-input"
-                    value={form.YPossition}
+                    id="YPosition-input"
+                    value={form.YPosition}
                     onChange={handleFormChange}
-                    name="YPossition"
-                    placeholder="Enter Y Possition"
+                    name="YPosition"
+                    placeholder="Enter Y Position"
                     required
                   />
                   <CFormText className="help-block">
-                    Please enter your signature top left corner Y possition
+                    Please enter your signature top left corner Y position
                   </CFormText>
                 </CCol>
               </CFormGroup>
               <CFormGroup row>
                 <CCol md="6">
                   <CFormGroup>
-                    <CLabel htmlFor="last-name">Width</CLabel>
+                    <CLabel htmlFor="Width-input">Width</CLabel>
                     <CInput
                       type="number"
                       id="Width-input"
@@ -188,7 +188,7 @@ const AddFileToList2sign = () => {
                   </CFormGroup>
                 </CCol>
                 <CCol md="6">
-                  <CLabel htmlFor="email-input">Height</CLabel>
+                  <CLabel htmlFor="height-input">Height</CLabel>
                   <CInput
                     type="number"
                     id="height-input"

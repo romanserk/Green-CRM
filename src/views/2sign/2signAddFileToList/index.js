@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
-
+import "./AddFileToList.scss";
 // import {Document, Page } from 'react-pdf';
 
 import {
@@ -33,30 +33,39 @@ const options = {
   cMapPacked: true,
 };
 
-  pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
+pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 const AddFileToList2sign = () => {
   const [form, setForm] = useState(initialForm);
   const [validated, setValidated] = useState(false);
-
-  
 
   // PDF Preview
   const [numPages, setNumPages] = useState(null);
   const [pageNumber, setPageNumber] = useState(1);
   const [file, setFile] = useState(null);
 
-  function onDocumentLoadSuccess({ numPages: nextNumPages }) {
+  const onDocumentLoadSuccess = ({ numPages: nextNumPages }) => {
     setNumPages(nextNumPages);
-  }
-  function onFileChange(event) {
+  };
+  const onFileChange = (event) => {
     setFile(event.target.files[0]);
-  }
+  };
+
+  let signaturePossitionStyle = {
+    display: `${form.width + form.height > 0 ? "block" : "none"}`,
+    zIndex: "500",
+    position: "absolute",
+    left: `${form.XPossition}px`,
+    top: `${form.YPossition}px`,
+    width: `${form.width}px`,
+    height: `${form.height}px`,
+    border: "solid 4px blue",
+  };
 
   // end PDF Preview
 
   const handleFormChange = (e) => {
-      console.log(form)
+    console.log(form);
     setForm({
       ...form,
       [e.target.name]: e.target.value,
@@ -80,10 +89,8 @@ const AddFileToList2sign = () => {
         <CCardBody>
           <CRow>
             <CCol md="7">
-              <div style={{position: 'relative'}}>
-                  <div style={{zIndex: "500", position: "absolute", left: `${form.XPossition}px`, top: `${form.YPossition}px`, width: `${form.width}px`, height: `${form.height}px`, border: "solid 4px blue"}}>
-
-                  </div>
+              <div style={{ position: "relative" }}>
+                <div style={signaturePossitionStyle}></div>
                 <Document
                   file={file}
                   onLoadSuccess={onDocumentLoadSuccess}

@@ -51,7 +51,7 @@ const AddFileToList2sign = () => {
     setFile(event.target.files[0]);
   };
 
-  let signaturePossitionStyle = {
+  let signaturePositionStyle = {
     display: `${form.width + form.height > 0 ? "block" : "none"}`,
     zIndex: "500",
     position: "absolute",
@@ -59,7 +59,9 @@ const AddFileToList2sign = () => {
     top: `${form.YPosition}px`,
     width: `${form.width}px`,
     height: `${form.height}px`,
-    border: "solid 4px blue",
+    border: "solid 3px blue",
+    boxShadow: "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px",
+    borderRadius: "7px",
   };
 
   // end PDF Preview
@@ -90,7 +92,7 @@ const AddFileToList2sign = () => {
           <CRow>
             <CCol md="7">
               <div style={{ position: "relative" }}>
-                <div style={signaturePossitionStyle}></div>
+                <div style={signaturePositionStyle}></div>
                 <Document
                   file={file}
                   onLoadSuccess={onDocumentLoadSuccess}
